@@ -1,5 +1,7 @@
 # project-switcher2 package
 
+[![Build Status](https://travis-ci.org/carloshfoliveira/project-switcher.svg?branch=master)](https://travis-ci.org/carloshfoliveira/project-switcher)
+
 Switch between sibling projects in the same folder.
 
 ## Usage
