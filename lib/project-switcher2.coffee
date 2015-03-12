@@ -1,13 +1,13 @@
-ProjectSwitcherView = require './project-switcher2-view'
+ProjectSwitcher2View = require './project-switcher2-view'
 
 module.exports =
-  projectSwitcherView: null
+  projectSwitcher2View: null
 
   activate: (state) ->
-    @projectSwitcherView = new ProjectSwitcherView(state.projectSwitcherViewState)
+    @projectSwitcher2View = new ProjectSwitcher2View(state.projectSwitcher2ViewState)
 
   deactivate: ->
-    @projectSwitcherView.destroy()
+    @projectSwitcher2View.destroy()
 
   serialize: ->
-    projectSwitcherViewState: @projectSwitcherView.serialize()
+    projectSwitcher2ViewState: @projectSwitcher2View.serialize()

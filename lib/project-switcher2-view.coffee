@@ -2,7 +2,7 @@
 utils = require './utils'
 
 module.exports =
-class ProjectSwitcherView extends SelectListView
+class ProjectSwitcher2View extends SelectListView
 
   initialize: (serializeState) ->
     super
