@@ -1,7 +1,7 @@
 {
   "name": "project-switcher2",
   "main": "./lib/project-switcher2",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "activationEvents": "project-switcher2:toggle",
   "description": "A fork from project-switcher. It basically switches between projects within the same folder.",
   "repository": "https://github.com/carloshfoliveira/project-switcher",
