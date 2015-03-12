@@ -3,4 +3,5 @@ ProjectSwitcher2View = require '../lib/project-switcher2-view'
 
 describe "ProjectSwitcher2View", ->
   it "has one valid test", ->
-    expect("life").toBe "easy"
+    # expect("life").toBe "easy" as
+    expect(1 + 1).toBe 2
