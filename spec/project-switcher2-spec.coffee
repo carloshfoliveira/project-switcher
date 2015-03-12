@@ -9,8 +9,8 @@ describe "ProjectSwitcher2", ->
   activationPromise = null
 
   beforeEach ->
-    atom.workspaceView = new WorkspaceView
-    activationPromise = atom.packages.activatePackage('projectSwitcher2')
+    atom.workspaceView = atom.views.getView(atom.workspace).__spacePenView
+    activationPromise = atom.packages.activatePackage('project-switcher2')
 
   describe "when the project-switcher2:toggle event is triggered", ->
     it "attaches and then detaches the view", ->
