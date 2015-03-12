@@ -1,4 +1,4 @@
-ProjectSwitcherView = require './project-switcher-view'
+ProjectSwitcherView = require './project-switcher2-view'
 
 module.exports =
   projectSwitcherView: null

@@ -3,9 +3,9 @@
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'Project Switcher'
+      'label': 'Project Switcher2'
       'submenu': [
-        { 'label': 'Toggle', 'command': 'project-switcher:toggle' }
+        { 'label': 'Toggle', 'command': 'project-switcher2:toggle' }
       ]
     ]
   }
