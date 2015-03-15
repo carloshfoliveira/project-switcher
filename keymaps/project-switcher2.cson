@@ -7,5 +7,11 @@
 
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
-'.workspace':
+'.platform-darwin .workspace':
   'cmd-;': 'project-switcher2:toggle'
+
+'.platform-win32 .workspace':
+  'ctrl-;': 'project-switcher2:toggle'
+
+'.platform-linux .workspace':
+  'ctrl-;': 'project-switcher2:toggle'
