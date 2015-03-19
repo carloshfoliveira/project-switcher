@@ -10,8 +10,5 @@
 '.platform-darwin .workspace':
   'cmd-;': 'project-switcher2:toggle'
 
-'.platform-win32 .workspace':
-  'ctrl-;': 'project-switcher2:toggle'
-
-'.platform-linux .workspace':
+'.platform-win32 .workspace, .platform-linux .workspace':
   'ctrl-;': 'project-switcher2:toggle'
