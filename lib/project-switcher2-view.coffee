@@ -14,6 +14,8 @@ class ProjectSwitcher2View extends SelectListView
 
   confirmed: (item) ->
     atom.project.setPath item.fullpath
+    for pane in atom.workspace.getPanes()
+      pane.destroy()
     @destroy()
 
   getFilterKey: ()->
