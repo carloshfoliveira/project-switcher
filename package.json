@@ -2,7 +2,9 @@
   "name": "project-switcher2",
   "main": "./lib/project-switcher2",
   "version": "0.3.1",
-  "activationEvents": "project-switcher2:toggle",
+  "activationCommands": {
+    "atom-text-editor": ["project-switcher2:toggle"]
+  },
   "description": "A fork from project-switcher. It basically switches between projects within the same folder.",
   "repository": "https://github.com/carloshfoliveira/project-switcher",
   "license": "MIT",
