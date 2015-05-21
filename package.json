@@ -1,7 +1,7 @@
 {
   "name": "project-switcher2",
   "main": "./lib/project-switcher2",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "activationCommands": {
     "atom-text-editor": [
       "project-switcher2:toggle"
