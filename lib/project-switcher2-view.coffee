@@ -1,19 +1,21 @@
 {SelectListView} = require 'atom-space-pen-views'
 utils = require './utils'
 
+workspace_view = atom.views.getView(atom.workspace).__spacePenView
+
 module.exports =
 class ProjectSwitcher2View extends SelectListView
 
   initialize: (serializeState) ->
     super
     @addClass 'project-switcher2 overlay from-top'
-    atom.workspaceView.command "project-switcher2:toggle", => @toggle()
+    workspace_view.command "project-switcher2:toggle", => @toggle()
 
   viewForItem: (item) ->
     "<li>#{item.name}</li>"
 
   confirmed: (item) ->
-    atom.project.setPath item.fullpath
+    atom.project.setPaths [item.fullpath]
     for pane in atom.workspace.getPanes()
       pane.destroy()
     @destroy()
@@ -30,8 +32,8 @@ class ProjectSwitcher2View extends SelectListView
 
   toggle: ->
     if @hasParent()
-      @detach()
+      @destroy()
     else
       @setItems utils.listProjects()
-      atom.workspaceView.append(this)
+      workspace_view.append(this)
       @focusFilterEditor()
