@@ -1,15 +1,14 @@
 {SelectListView} = require 'atom-space-pen-views'
 utils = require './utils'
 
-workspace_view = atom.views.getView(atom.workspace).__spacePenView
 
 module.exports =
 class ProjectSwitcher2View extends SelectListView
 
   initialize: (serializeState) ->
-    super
-    @addClass 'project-switcher2 overlay from-top'
-    workspace_view.command "project-switcher2:toggle", => @toggle()
+    super()
+    @addClass('project-switcher2')
+    atom.commands.add "atom-workspace", "project-switcher2:toggle", => @toggle()
 
   viewForItem: (item) ->
     "<li>#{item.name}</li>"
@@ -18,22 +17,32 @@ class ProjectSwitcher2View extends SelectListView
     atom.project.setPaths [item.fullpath]
     for pane in atom.workspace.getPanes()
       pane.destroy()
-    @destroy()
+    @cancel()
 
-  getFilterKey: ()->
-    'name'
-
-  # Returns an object that can be retrieved when package is activated
-  serialize: ->
+  cancelled: ->
+    @hide()
 
   # Tear down any state and detach
   destroy: ->
     @detach()
 
+
+  show: ->
+    @panel ?= atom.workspace.addModalPanel(item: this)
+    @panel.show()
+
+    @storeFocusedElement()
+
+    items = utils.listProjects()
+
+    @setItems(items)
+    @focusFilterEditor()
+
   toggle: ->
-    if @hasParent()
-      @destroy()
+    if @panel?.isVisible()
+      @cancel()
     else
-      @setItems utils.listProjects()
-      workspace_view.append(this)
-      @focusFilterEditor()
+      @show()
+
+  hide: ->
+    @panel?.hide()

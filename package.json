@@ -11,7 +11,7 @@
   "repository": "https://github.com/carloshfoliveira/project-switcher",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">=0.174.0 <2.0.0"
   },
   "dependencies": {
     "fs-plus": "~2.2.0",
