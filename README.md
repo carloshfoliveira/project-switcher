@@ -6,10 +6,14 @@ Switch between sibling projects in the same folder using the same opened window!
 
 ## Usage
 
-just press `cmd-;`(if you're in a Mac machine) or `ctrl-;` for Linux/Windows users.
+Just press `cmd-;`(if you're in a Mac machine) or `ctrl-;` for Linux/Windows users.
+Some users have the cedilla `ç` in their keyboard, this key's in the place where
+`;` is in most of the keyboards. Users that have `ç` in their keyboard must use
+`ctrl-ç` instead of `ctrl-;`, due to this change.
 
 ![A screenshot of project-switcher2 package](http://guileen.github.io/img/project-switcher/screenshot-switch.gif)
 
 ## TODO
 
-Add option in package settings to switch between opening in same/another window
+* Add option in package settings to switch between opening in same/another window;
+* Use `ctrl-;` whether users' keyboard have `ç` or not.
