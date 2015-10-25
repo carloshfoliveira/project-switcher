@@ -20,6 +20,5 @@ Some users have the cedilla `ç` in their keyboard, this key's in the place wher
 
 ## TODO
 
-* Add option in package settings to switch between opening in same/another window;
 * Use `ctrl-;` whether users' keyboard have `ç` or not.
 * Make it work with multiple folders in project
