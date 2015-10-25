@@ -14,7 +14,14 @@ class ProjectSwitcher2View extends SelectListView
     "<li>#{item.name}</li>"
 
   confirmed: (item) ->
-    atom.project.setPaths [item.fullpath]
+    if atom.config.get('project-switcher2.openInAnotherWindow')
+      atom.open {
+        pathsToOpen: [item.fullpath]
+        newWindow: true
+      }
+      @cancel
+    else
+      atom.project.setPaths [item.fullpath]
     if atom.config.get('project-switcher2.closePanes')
       for pane in atom.workspace.getPanes()
         pane.destroy()
