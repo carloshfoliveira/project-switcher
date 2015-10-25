@@ -15,8 +15,9 @@ class ProjectSwitcher2View extends SelectListView
 
   confirmed: (item) ->
     atom.project.setPaths [item.fullpath]
-    for pane in atom.workspace.getPanes()
-      pane.destroy()
+    if atom.config.get('project-switcher2.closePanes')
+      for pane in atom.workspace.getPanes()
+        pane.destroy()
     @cancel()
 
   cancelled: ->
