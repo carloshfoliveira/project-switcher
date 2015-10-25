@@ -18,6 +18,12 @@ Some users have the cedilla `ç` in their keyboard, this key's in the place wher
 
 ![A screenshot of project-switcher2 package](http://guileen.github.io/img/project-switcher/screenshot-switch.gif)
 
+## FEATURES
+
+* Change between sibling projects in the same folder
+* Automatically close opened panes when switching between projects (Settings)
+* Open in desired project in another window (Settings)
+
 ## TODO
 
 * Use `ctrl-;` whether users' keyboard have `ç` or not.
