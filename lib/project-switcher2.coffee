@@ -8,6 +8,10 @@ module.exports =
       type: 'boolean'
       description: 'This option sets whether panes are closed when switching between sibling projects'
       default: false
+    openInAnotherWindow:
+      type: 'boolean'
+      description: 'This option sets to open selected project in another window instead of the same one.'
+      default: false
 
   activate: (state) ->
     @projectSwitcher2View = new ProjectSwitcher2View(state.projectSwitcher2ViewState)
