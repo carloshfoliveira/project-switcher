@@ -34,7 +34,6 @@ class ProjectSwitcher2View extends SelectListView
   destroy: ->
     @detach()
 
-
   show: ->
     @panel ?= atom.workspace.addModalPanel(item: this)
     @panel.show()
@@ -54,3 +53,6 @@ class ProjectSwitcher2View extends SelectListView
 
   hide: ->
     @panel?.hide()
+
+  getFilterKey: ->
+    'name'
