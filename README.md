@@ -2,7 +2,7 @@
 
 <a href="https://zenhub.io"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png"></a>
 
-[![Build Status](https://travis-ci.org/carloshfoliveira/project-switcher2.svg?branch=master)](https://travis-ci.org/carloshfoliveira/project-switcher2)
+[![Build Status](https://travis-ci.org/chocoelho/project-switcher2.svg?branch=master)](https://travis-ci.org/chocoelho/project-switcher2)
 [![Plugin installs!](https://img.shields.io/apm/dm/project-switcher2.svg)](https://atom.io/packages/project-switcher2)
 [![Package version!](https://img.shields.io/apm/v/project-switcher2.svg?style=flat)](https://atom.io/packages/project-switcher2)
 
@@ -20,7 +20,7 @@ Some users have the cedilla `ç` in their keyboard, this key's in the place wher
 
 ## FEATURES
 
-* Change between sibling projects in the same folder
+* Change between sibling projects in the same folder **OR** projects inside Project Home variable
 * Automatically close opened panes when switching between projects (Settings)
 * Open in desired project in another window (Settings)
 
