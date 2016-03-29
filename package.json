@@ -8,7 +8,7 @@
     ]
   },
   "description": "A fork from project-switcher. It basically switches between projects within the same folder.",
-  "repository": "https://github.com/carloshfoliveira/project-switcher2",
+  "repository": "https://github.com/chocoelho/project-switcher2",
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
