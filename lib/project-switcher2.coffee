@@ -12,6 +12,10 @@ module.exports =
       type: 'boolean'
       description: 'This option sets to open selected project in another window instead of the same one.'
       default: false
+    useProjectHome:
+      type: 'boolean'
+      description: 'This options sets to switch between projects defined in Atom Settings. See Project Home option.'
+      default: false
 
   activate: (state) ->
     @projectSwitcher2View = new ProjectSwitcher2View(state.projectSwitcher2ViewState)
