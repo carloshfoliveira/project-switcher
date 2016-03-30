@@ -8,8 +8,13 @@ exports.listProjects = ()->
     exports.getSiblingProjects()
 
 exports.getSiblingProjects = () ->
-  parent = path.dirname atom.project.getPaths()
-  return exports.readProjectsPaths(parent)
+  paths = atom.project.getPaths()
+  paths.forEach (projectPath) ->
+    index = paths.indexOf projectPath
+    value = path.dirname projectPath
+    paths[index] = value
+
+  return exports.readProjectsPaths(paths)
 
 exports.getProjectsPath = () ->
   paths = atom.config.get('core.projectHome')
