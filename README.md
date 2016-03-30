@@ -23,8 +23,13 @@ Some users have the cedilla `ç` in their keyboard, this key's in the place wher
 * Change between sibling projects in the same folder **OR** projects inside Project Home variable
 * Automatically close opened panes when switching between projects (Settings)
 * Open in desired project in another window (Settings)
+* Works with multiple folders
+  * Project Tree
+    * It doesn't recover previous state if you switch back
+  * Project Home
+    * Project paths separated by comma
 
 ## TODO
 
+* Recover project workspace
 * Use `ctrl-;` whether users' keyboard have `ç` or not.
-* Make it work with multiple folders in project
