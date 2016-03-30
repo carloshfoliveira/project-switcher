@@ -9,17 +9,34 @@ exports.listProjects = ()->
 
 exports.getSiblingProjects = () ->
   parent = path.dirname atom.project.getPaths()
-  return exports.readProjects(parent)
+  return exports.readProjectsPaths(parent)
 
 exports.getProjectsPath = () ->
-  projectHome = atom.config.get('core.projectHome')
-  return exports.readProjects(projectHome)
+  paths = atom.config.get('core.projectHome')
+  paths = paths.replace(';', ',').split(',')
+  return exports.readProjectsPaths(paths)
 
-exports.readProjects = (projectsPath) ->
-  paths = fs.readdirSync projectsPath
-  projectList = []
-  paths.forEach (projectName) ->
-    fullPath = projectsPath + '/' + projectName
-    if fs.isDirectorySync fullPath
-      projectList.push name:projectName, fullpath:fullPath
-  return projectList
+exports.readProjectsPaths = (paths) ->
+  projects = {}
+  for projectPath in paths
+    do (projectPath) ->
+    try
+      projectsInPath = fs.readdirSync projectPath
+    catch error
+      continue
+    projects[projectPath] = projectsInPath
+
+  return exports.readProjects(projects)
+
+exports.readProjects = (projects) ->
+  projectsList = []
+  for parent,folders of projects
+    paths = projects[parent]
+    paths.forEach (project) ->
+      fullPath = parent + '/' + project
+      if fs.isDirectorySync fullPath
+        name = path.basename parent
+        name = name + '/' + project
+        projectsList.push name:name, fullpath: fullPath
+
+  return projectsList
