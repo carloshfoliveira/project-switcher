@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.org/chocoelho/project-switcher2.svg?branch=master)](https://travis-ci.org/chocoelho/project-switcher2)
 [![Plugin installs!](https://img.shields.io/apm/dm/project-switcher2.svg)](https://atom.io/packages/project-switcher2)
 [![Package version!](https://img.shields.io/apm/v/project-switcher2.svg?style=flat)](https://atom.io/packages/project-switcher2)
+[![License!](https://img.shields.io/apm/l/project-switcher2.svg?style=flat)](https://atom.io/packages/project-switcher2)
 
 
 Switch between sibling projects in the same folder using the same opened window!
@@ -16,7 +17,7 @@ Some users have the cedilla `ç` in their keyboard, this key's in the place wher
 `;` is in most of the keyboards. Users that have `ç` in their keyboard must use
 `ctrl-ç` instead of `ctrl-;`, due to this change.
 
-![A screenshot of project-switcher2 package](http://guileen.github.io/img/project-switcher/screenshot-switch.gif)
+![A screencast of project-switcher2 package](https://github.com/chocoelho/project-switcher2/raw/master/project-switcher2.gif)
 
 ## FEATURES
 
