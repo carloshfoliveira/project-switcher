@@ -13,9 +13,9 @@ Switch between sibling projects in the same folder using the same opened window!
 ## Usage
 
 Just press `cmd-;`(if you're in a Mac machine) or `ctrl-;` for Linux/Windows users.
-Some users have the cedilla `ç` in their keyboard, this key's in the place where
-`;` is in most of the keyboards. Users that have `ç` in their keyboard must use
-`ctrl-ç` instead of `ctrl-;`, due to this change.
+Some users have the cedilla key (`ç`) in their keyboard, this key's in the place where
+`;` is in US keyboards. Users that have `ç` in their keyboard can use both
+`ctrl-ç` and `ctrl-;`.
 
 ![A screencast of project-switcher2 package](https://github.com/chocoelho/project-switcher2/raw/master/project-switcher2.gif)
 
@@ -33,4 +33,3 @@ Some users have the cedilla `ç` in their keyboard, this key's in the place wher
 ## TODO
 
 * Recover project workspace
-* Use `ctrl-;` whether users' keyboard have `ç` or not.
