@@ -1,7 +1,5 @@
 # Project Switcher 2 for Atom Text Editor
 
-<a href="https://zenhub.io"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png"></a>
-
 [![Build Status](https://travis-ci.org/chocoelho/project-switcher2.svg?branch=master)](https://travis-ci.org/chocoelho/project-switcher2)
 [![Plugin installs!](https://img.shields.io/apm/dm/project-switcher2.svg)](https://atom.io/packages/project-switcher2)
 [![Package version!](https://img.shields.io/apm/v/project-switcher2.svg?style=flat)](https://atom.io/packages/project-switcher2)
