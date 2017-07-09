@@ -16,6 +16,7 @@ describe "when project-switcher2:toggle event is triggered", ->
   it "should attach and detach the view", ->
     waitsForPromise ->
       atom.packages.activatePackage('project-switcher2')
+      
     runs ->
       expect(workspaceElement.querySelector('.project-switcher')).not.toExist()
       atom.commands.dispatch workspaceElement, 'project-switcher2:toggle'
