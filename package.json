@@ -1,7 +1,7 @@
 {
   "name": "project-switcher2",
   "main": "./lib/project-switcher2",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "A fork from project-switcher. It basically switches between projects within the same folder.",
   "repository": "https://github.com/chocoelho/project-switcher2",
   "license": "MIT",
