@@ -15,7 +15,7 @@ Some users have the cedilla key (`ç`) in their keyboard, this key's in the plac
 `;` is in US keyboards. Users that have `ç` in their keyboard can use both
 `ctrl-ç` and `ctrl-;`.
 
-![A screencast of project-switcher2 package](http://i.imgur.com/0cNI24d.gif)
+![A screencast of project-switcher2 package](http://i.imgur.com/dl4eic7.gif)
 
 ## FEATURES
 
