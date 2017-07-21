@@ -35,13 +35,17 @@ exports.readProjectsPaths = (paths) ->
 
 exports.readProjects = (projects) ->
   projectsList = []
+  console.log projects
   for parent,folders of projects
     paths = projects[parent]
     paths.forEach (project) ->
       fullPath = parent + '/' + project
       if fs.isDirectorySync fullPath
-        name = path.basename parent
-        name = name + '/' + project
+        if Object.keys(projects).length > 1
+          parent_basename = path.basename parent
+          name = parent_basename + '/' + project
+        else
+          name = project
         projectsList.push name:name, fullpath: fullPath
 
   return projectsList
