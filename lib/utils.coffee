@@ -35,7 +35,6 @@ exports.readProjectsPaths = (paths) ->
 
 exports.readProjects = (projects) ->
   projectsList = []
-  console.log projects
   for parent,folders of projects
     paths = projects[parent]
     paths.forEach (project) ->
