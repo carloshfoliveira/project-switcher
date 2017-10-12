@@ -16,6 +16,10 @@ module.exports =
       type: 'boolean'
       description: 'This options sets to switch between projects defined in Atom Settings. See Project Home option.'
       default: false
+    projectsLocations:
+      type: 'string'
+      description: 'Set a list of paths where to find projects. You can set multiple paths separated by commas'
+      default: ''
 
   activate: (state) ->
     @projectSwitcher2View = new ProjectSwitcher2View(state.projectSwitcher2ViewState)
