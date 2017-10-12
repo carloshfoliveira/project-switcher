@@ -19,14 +19,17 @@ Some users have the cedilla key (`ç`) in their keyboard, this key's in the plac
 
 ## FEATURES
 
-* Change between sibling projects in the same folder **OR** projects inside Project Home variable
+* Change between sibling projects in the same folder **AND/OR** projects inside Project Home variable
+* Set projects paths to switch between when you don't want to mess with Project Home editor variable
 * Automatically close opened panes when switching between projects (Settings)
 * Open in desired project in another window (Settings)
 * Works with multiple folders
   * Project Tree
     * It doesn't recover previous state if you switch back
   * Project Home
-    * Project paths separated by comma
+    * Project Home editor paths separated by comma
+  * Projects Paths
+    * Custom projects paths separated by comma, so you don't mess with the core Project Home option
 
 ## TODO
 
