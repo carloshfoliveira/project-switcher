@@ -2,24 +2,35 @@ fs = require 'fs-plus'
 path = require 'path'
 
 exports.listProjects = ()->
+  paths = []
+
   if atom.config.get('project-switcher2.useProjectHome')
-    exports.getProjectsPath()
-  else
-    exports.getSiblingProjects()
+    projectHomePaths = exports.getProjectsPath()
+    paths = paths.concat(projectHomePaths)
+
+  siblingPaths = exports.getSiblingProjects()
+  projectsLocations = exports.getProjectsLocation()
+
+  paths = paths.concat(siblingPaths, projectsLocations)
+
+  return exports.readProjectsPaths(paths)
+
+exports.getProjectsLocation = () ->
+  projectsLocations = atom.config.get('project-switcher2.projectsLocations')
+  return projectsLocations.replace(';', ',').split(',')
 
 exports.getSiblingProjects = () ->
-  paths = atom.project.getPaths()
-  paths.forEach (projectPath) ->
-    index = paths.indexOf projectPath
+  siblingPaths = atom.project.getPaths()
+  siblingPaths.forEach (projectPath) ->
+    index = siblingPaths.indexOf projectPath
     value = path.dirname projectPath
-    paths[index] = value
+    siblingPaths[index] = value
 
-  return exports.readProjectsPaths(paths)
+  return siblingPaths
 
 exports.getProjectsPath = () ->
-  paths = atom.config.get('core.projectHome')
-  paths = paths.replace(';', ',').split(',')
-  return exports.readProjectsPaths(paths)
+  projectHomePaths = atom.config.get('core.projectHome')
+  return projectHomePaths.replace(';', ',').split(',')
 
 exports.readProjectsPaths = (paths) ->
   projects = {}
